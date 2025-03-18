@@ -1,9 +1,9 @@
 ## What?
-<!-- Explain what your pull request does -->
+<!-- REQUIRED — Explain what your pull request does -->
 
 
 ## Why?
-<!-- Explain why you're opening this pull request, what limitations does it address, etc..  If you're fixing a bug with an open bug report you can just link to the bug report -->
+<!-- REQUIRED — Explain why you're opening this pull request, what limitations does it address, etc..  If you're fixing a bug with an open bug report you can just link to the bug report -->
 
 
 ## Examples
@@ -11,7 +11,7 @@
 
 
 ## How to test
-<!-- Give the steps required to test your pull request -->
+<!-- REQUIRED — Give the steps required to test your pull request -->
 
 1. Go to '...'
 2. Click on '....'
@@ -19,7 +19,7 @@
 4. See '....'
 
 ## Documentation of functionality
-<!-- Link to the accompanying documentation pull request or identify where the documentation is located in this pull request.  If no documentation is needed, please specify this here -->
+<!-- REQUIRED — Link to the accompanying documentation pull request or identify where the documentation is located in this pull request.  If no documentation is needed, please specify this here -->
 
 
 ## Limitations
