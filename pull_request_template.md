@@ -7,7 +7,7 @@
 
 
 ## Examples
-<!-- If applicable, give examples of your changes, screenshots, videos, etc. -->
+<!-- OPTIONAL — If applicable, give examples of the changes the user will observe, e.g. screenshots, videos, diagrams, console output, etc., otherwise put "N/A" or remove the section.  Including examples of before the PR and after the PR is encouraged. -->
 
 
 ## How to test
@@ -23,17 +23,17 @@
 
 
 ## Limitations
-<!-- List anything that isn't addressed, e.g. corner cases, and why they weren't addressed -->
+<!-- OPTIONAL — If there is anything you decided not to do/support in this PR that might otherwise be expected, list them here along with the reason why you didn't do/support them, otherwise put "None" -->
 
 
-## Alternatives considered
-<!-- If there are any alternative ways of implementing this that you thought of, but decided against, list them here along with why they were discarded -->
+## Alternative implementations considered
+<!-- OPTIONAL — If there are any alternative ways of implementing this change that you thought of, but decided against, list them here along with why they were discarded, otherwise put "None" -->
 
 
 ## Open questions
-<!-- List any questions you have -->
+<!-- OPTIONAL — If you have any questions, put them here, otherwise put "None" -->
 
 
 ## Additional details or related context
-<!-- Give any other details that you think the reviewers should be aware of -->
+<!-- OPTIONAL — If there are any other details that you think the reviewers should be aware of that you didn't put elsewhere, e.g. links to related issues, pull requests, references you used, notes on weird things, attribution, etc., put them here, otherwise put "None" -->
 
