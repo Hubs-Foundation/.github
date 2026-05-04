@@ -1,0 +1,14 @@
+# When modifying this file, make sure to pass on the update to all repositories.  A tool like https://github.com/gruntwork-io/git-xargs may be useful for this.
+
+name: Roadmap Auto Commenter
+on:
+  issues:
+    types:
+      - opened
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  call_reusable_roadmap_auto_commenter:
+    uses: Hubs-Foundation/.github/.github/workflows/reusable-roadmap-auto-commenter.yml@main
