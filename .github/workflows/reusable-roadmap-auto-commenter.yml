@@ -1,3 +1,5 @@
+# WARNING: This workflow is sometimes triggered by pull_request_target and so will always run automatically on pull requests made by anyone.  Do not do any sort of processing of user input, such as checking out code.
+
 name: Reusable Roadmap Auto Commenter
 on:
   workflow_call
@@ -27,7 +29,7 @@ jobs:
             For more information on how the roadmaps work, see our [roadmaps policy on GitHub](https://github.com/Hubs-Foundation/policies-procedures-guidelines-public/blob/main/roadmaps-policy.md).
 
   add_pull_request_comment:
-    if: ${{ github.event_name == 'pull_request' && github.repository_owner == 'Hubs-Foundation' }}
+    if: ${{ github.event_name == 'pull_request_target' && github.repository_owner == 'Hubs-Foundation' }}
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
