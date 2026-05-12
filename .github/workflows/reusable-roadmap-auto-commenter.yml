@@ -1,0 +1,52 @@
+# WARNING: This workflow is sometimes triggered by pull_request_target and so will always run automatically on pull requests made by anyone.  Do not do any sort of processing of user input, such as checking out code.
+
+name: Reusable Roadmap Auto Commenter
+on:
+  workflow_call
+
+jobs:
+  add_issue_comment:
+    if: ${{ github.event_name == 'issues' && github.repository_owner == 'Hubs-Foundation' }}
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: add initial issue comment
+        if: "${{ !contains(join(github.event.issue.labels.*.name), 'Roadmap:') }}"
+        run: |
+          gh issue comment "$NUMBER" --body "$BODY"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          NUMBER: ${{ github.event.issue.number }}
+          BODY: |
+            Thank you for the issue.
+
+            ROADMAP STATUS: This issue isn't currently on any roadmap.  Updates will be conveyed here as its place on/off a roadmap changes.
+
+            You can view the roadmaps here: [Roadmaps Google Drive folder](https://drive.google.com/drive/folders/1Z6q2GoqnXIslxfcPP0ctVlTAKLi9OzEt).
+
+            For more information on how the roadmaps work, see our [roadmaps policy on GitHub](https://github.com/Hubs-Foundation/policies-procedures-guidelines-public/blob/main/roadmaps-policy.md).
+
+  add_pull_request_comment:
+    if: ${{ github.event_name == 'pull_request_target' && github.repository_owner == 'Hubs-Foundation' }}
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: add initial pull request comment
+        if: "${{ !contains(join(github.event.pull_request.labels.*.name), 'Roadmap:') }}"
+        run: |
+          gh pr comment "$NUMBER" --body "$BODY"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          NUMBER: ${{ github.event.number }}
+          BODY: |
+            Thank you for the pull request.
+
+            ROADMAP STATUS: This pull request isn't currently on any roadmap.  Updates will be conveyed here as its place on/off a roadmap changes.
+
+            You can view the roadmaps here: [Roadmaps Google Drive folder](https://drive.google.com/drive/folders/1Z6q2GoqnXIslxfcPP0ctVlTAKLi9OzEt).
+
+            For more information on how the roadmaps work, see our [roadmaps policy on GitHub](https://github.com/Hubs-Foundation/policies-procedures-guidelines-public/blob/main/roadmaps-policy.md).
