@@ -1,0 +1,37 @@
+{
+  "id": 15235882,
+  "name": "Issue Triage Branch Protections",
+  "target": "branch",
+  "source_type": "Repository",
+  "source": "Hubs-Foundation/.github",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "exclude": [],
+      "include": [
+        "~ALL"
+      ]
+    }
+  },
+  "rules": [
+    {
+      "type": "deletion"
+    },
+    {
+      "type": "non_fast_forward"
+    },
+    {
+      "type": "creation"
+    },
+    {
+      "type": "update"
+    }
+  ],
+  "bypass_actors": [
+    {
+      "actor_id": 10594833,
+      "actor_type": "Team",
+      "bypass_mode": "exempt"
+    }
+  ]
+}
